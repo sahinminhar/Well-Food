@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Menu Page */
+
+h6 {
+  color: orangered;
+  text-align: center;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+h2 {
+  color: black;
+  text-align: center;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+.menu-list {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.menu-item {
+  border: solid transparent;
+  height: 160px;
+  width: 140px;
+  padding: 17px;
+}
+.menu-item:hover {
+  border-color: orangered;
+}
+.heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.menu-list2 {
+  margin-top: 50px;
+}
+.menu-item2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: 250px;
+}
+.menu-item2-text {
+  margin-left: 50px;
+  margin-top: 80px;
+}
+.food-name {
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.price {
+  color: orangered;
+  margin-left: 400px;
+  margin-top: -40px;
+}
+.btn {
+  margin-left: 940px;
+  width: 400px;
+  margin-top: 40px;
+  margin-bottom: 41px;
+}
