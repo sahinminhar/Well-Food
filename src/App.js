@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Dashboard from "./pages/dashboard/dashboard";
-import Menu from "./pages/menu/menuitem";
-import CheckoutPage from "./pages/checkout/checkout";
+import Dashboard from "./pages/user/dashboard/dashboard";
+import Menu from "./pages/user/menu/menuitem";
+import CheckoutPage from "./pages/user/checkout/checkout";
 import "./App.css";
 import "./assets/css/style.css";
 
