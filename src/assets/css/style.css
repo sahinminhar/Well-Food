@@ -8,9 +8,9 @@ body {
 
 h6 {
   color: orangered;
-  text-align: center;
   margin-top: 15px;
   text-transform: uppercase;
+  text-align: center;
 }
 h2 {
   color: black;
@@ -45,34 +45,143 @@ h2 {
   margin-top: 10px;
 }
 .menu-list2 {
-  margin-top: 50px;
-}
-.menu-item2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin-left: 250px;
-}
-.menu-item2-text {
-  margin-left: 50px;
-  margin-top: 80px;
-}
-.food-name {
-  font-weight: bold;
-  font-size: 25px;
-  text-transform: uppercase;
-}
-.price {
-  color: orangered;
-  margin-left: 400px;
-  margin-top: -40px;
+  margin-top: 10px;
 }
 .btn {
-  margin-left: 940px;
+  margin-left: 560px;
   width: 400px;
   margin-top: 40px;
   margin-bottom: 41px;
+}
+.card-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  width: 400px;
+  justify-content: space-between;
+  margin-left: 115px;
+}
+.item-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+.item-info {
+  flex-grow: 1;
+}
+.item-name {
+  font-weight: 600;
+  margin: 0;
+}
+.item-description {
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0;
+}
+.item-price {
+  color: orange;
+  font-weight: bold;
+  margin-top: 15px;
+  text-transform: uppercase;
+  text-align: start !important;
+}
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.quantity-control button {
+  font-weight: bold;
+}
+
+/* Checkout */
+
+.checkout-container {
+  padding: 30px;
+  font-family: sans-serif;
+}
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+  padding: 40px;
+  border-radius: 20px;
+  width: 1200px;
+  height: 500px;
+  margin-left: 140px;
+}
+.order-box {
+  flex: 1;
+  max-width: 400px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 430px;
+}
+.order-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+.order-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.order-details {
+  flex: 1;
+  margin-left: 15px;
+}
+.trash-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 370px;
+}
+.pay-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: -7px;
+}
+.spinner-box {
+  flex: 1;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spinner-placeholder {
+  width: 250px;
+  height: 250px;
+  background-color: #ddd;
+  border-radius: 20px;
+  margin-top: 20px;
 }

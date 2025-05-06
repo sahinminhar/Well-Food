@@ -39,7 +39,7 @@ const MenuItem = () => {
 
   const handleBuyNow = () => {
     localStorage.setItem("cart", JSON.stringify(selectedItems));
-    window.location.href = "/checkout"; // or use React Router's `navigate("/checkout")`
+    window.location.href = "/checkout";
   };
 
   return (
@@ -76,69 +76,88 @@ const MenuItem = () => {
 
       {/* Last */}
       <section className="menu-list2">
-        <div className="menu-list2">
-          <MenuItemCard
-            name="beef burger"
-            description="Juicy grilled beef patty in soft bun"
-            image={beefburgerImg}
-            price={120}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
-        <div className="menu-list2">
-          <MenuItemCard
-            name="Italian pizza"
-            description="Classic cheese & tomato Italian style"
-            image={pizzaImg}
-            price={250}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
-        <div className="menu-list2">
-          <MenuItemCard
-            name="Chicken roll"
-            description="Spicy chicken wrapped in soft roti"
-            image={chickenrollImg}
-            price={90}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
-        <div className="menu-list2">
-          <MenuItemCard
-            name="shawarma"
-            description="Chicken & veggies wrapped in pita"
-            image={shawarmaImg}
-            price={110}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
-        <div className="menu-list2">
-          <MenuItemCard
-            name="Sea octopus"
-            description="Exotic grilled octopus with spices"
-            image={seaImg}
-            price={400}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
-        <div className="menu-list2">
-          <MenuItemCard
-            name="hot dog mustard"
-            description="	Hot dog topped with tangy mustard"
-            image={hotdogImg}
-            price={80}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
-        <div className="menu-list2">
-          <MenuItemCard
-            name="raw mince beef"
-            description="Fresh ground beef for cooking"
-            image={rawmincebeefImg}
-            price={180}
-            onQuantityChange={handleQuantityChange}
-          />
-        </div>
+        <Container>
+          <Row>
+            <Col md={6}>
+              <MenuItemCard
+                name="beef burger"
+                description="Juicy grilled beef patty in soft bun"
+                image={beefburgerImg}
+                price={120}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+            <Col md={6}>
+              <MenuItemCard
+                name="Italian pizza"
+                description="Classic cheese & tomato Italian style"
+                image={pizzaImg}
+                price={250}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <MenuItemCard
+                name="Chicken roll"
+                description="Spicy chicken wrapped in soft roti"
+                image={chickenrollImg}
+                price={90}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+            <Col md={6}>
+              <MenuItemCard
+                name="shawarma"
+                description="Chicken & veggies wrapped in pita"
+                image={shawarmaImg}
+                price={110}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <MenuItemCard
+                name="Sea octopus"
+                description="Exotic grilled octopus with spices"
+                image={seaImg}
+                price={190}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+            <Col md={6}>
+              <MenuItemCard
+                name="hot dog mustard"
+                description="	Hot dog topped with tangy mustard"
+                image={hotdogImg}
+                price={80}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <MenuItemCard
+                name="raw mince beef"
+                description="Fresh ground beef for cooking"
+                image={rawmincebeefImg}
+                price={180}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+            <Col md={6}>
+              <MenuItemCard
+                name="hot dog mustard"
+                description="	Hot dog topped with tangy mustard"
+                image={hotdogImg}
+                price={80}
+                onQuantityChange={handleQuantityChange}
+              />
+            </Col>
+          </Row>
+        </Container>
       </section>
       <section>
         <Button variant="success" className="btn" onClick={handleBuyNow}>

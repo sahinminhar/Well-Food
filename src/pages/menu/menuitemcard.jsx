@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../assets/css/style.css";
 
 const MenuItemCard = ({
   name,
@@ -21,40 +22,18 @@ const MenuItemCard = ({
     onQuantityChange(name, newQty, price, image);
   };
 
-  const totalPrice = quantity * price;
-
   return (
-    <div className="menu-item2" style={{ marginBottom: "20px" }}>
-      <img
-        src={image}
-        alt={name}
-        style={{ height: "100px", width: "100px", borderRadius: "50%" }}
-      />
-      <div className="menu-item2-text">
-        <p
-          className="food-name"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          {name}
-        </p>
-        <p className="description">{description}</p>
-        <h4 className="price">₹{totalPrice}</h4>
-      </div>
-      <div
-        style={{
-          marginLeft: "170px",
-          display: "flex",
-          alignItems: "center",
-          gap: "100px",
-        }}
-      >
-        <button onClick={decrement} style={{ padding: "5px 10px" }}>
-          -
-        </button>
-        <span>{quantity}</span>
-        <button onClick={increment} style={{ padding: "5px 10px" }}>
-          +
-        </button>
+    <div className="card-container">
+      <img src={image} alt={name} className="item-image" />
+      <div className="item-info">
+        <h5 className="item-name">{name.toUpperCase()}</h5>
+        <p className="item-description">{description}</p>
+        <h6 className="item-price">₹{price}</h6>
+        <div className="quantity-control">
+          <button onClick={decrement}>-</button>
+          <span>{quantity}</span>
+          <button onClick={increment}>+</button>
+        </div>
       </div>
     </div>
   );

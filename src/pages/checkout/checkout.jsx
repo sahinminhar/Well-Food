@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Delete from "./delete";
+import "../../assets/css/style.css";
 
 const Checkout = () => {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(savedCart);
+  }, []);
+
+  const handleDelete = (indexToRemove) => {
+    const updatedCart = cart.filter((_, index) => index !== indexToRemove);
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  };
 
   const totalAmount = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -9,17 +22,30 @@ const Checkout = () => {
   );
 
   return (
-    <div>
-      <h2>Order Summary</h2>
-      {cart.map((item) => (
-        <div key={item.name} style={{ marginBottom: "20px" }}>
-          <img src={item.image} alt={item.name} style={{ height: "100px", width: "100px", borderRadius: "50%" }} />
-          <p className="food-name">{item.name}</p>
-          <p>Quantity: {item.quantity}</p>
-          <p>Price: ₹{item.price * item.quantity}</p>
+    <div className="checkout-container">
+      <h2 className="title">ORDER SUMMARY</h2>
+      <div className="checkout-content">
+        {/* Left: Order Summary Card */}
+        <div className="order-box">
+          {cart.map((item, index) => (
+            <Delete
+              key={item.name}
+              item={item}
+              onDelete={() => handleDelete(index)}
+            />
+          ))}
         </div>
-      ))}
-      <h3 className="price">Total: ₹{totalAmount}</h3>
+
+        {/* Right: Placeholder for Spinner */}
+        <div className="spinner-box">
+          <h4>Spin for offer</h4>
+          <div className="spinner-placeholder"></div>
+        </div>
+        <div className="order-footer">
+          <h3>Total : ₹{totalAmount}</h3>
+          <button className="pay-btn">Pay</button>
+        </div>
+      </div>
     </div>
   );
 };
