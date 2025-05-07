@@ -185,3 +185,44 @@ h2 {
   border-radius: 20px;
   margin-top: 20px;
 }
+
+/* Responsive Design */
+@media screen and (min-width: 350px) and (max-width: 650px) {
+  /* Menu */
+  h2 {
+    font-size: 16px !important;
+  }
+  .menu-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .res-img {
+    height: 40px !important;
+  }
+  .menu-item {
+    height: 100px !important;
+    width: 80px !important;
+  }
+  .heading {
+    font-size: 8px !important;
+  }
+  .card-container {
+    width: 287px;
+    margin-left: 29px;
+  }
+  .btn {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 83px !important;
+  }
+  .res-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}

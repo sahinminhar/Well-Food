@@ -53,21 +53,21 @@ const MenuItem = () => {
       {/* Middle */}
       <section>
         <Container className="menu-list">
-          <Row>
+          <Row className="menu-items">
             <Col xs={12} md={1} className="menu-item">
-              <Image src={dessertImg} rounded style={{ height: "100px" }} />
+              <Image src={dessertImg} rounded style={{ height: "100px" }} className="res-img"/>
               <p className="heading">dessert</p>
             </Col>
             <Col xs={12} md={1} className="menu-item">
-              <Image src={vegetarianImg} rounded style={{ height: "100px" }} />
+              <Image src={vegetarianImg} rounded style={{ height: "100px" }} className="res-img" />
               <p className="heading">vegetarian</p>
             </Col>
             <Col xs={12} md={1} className="menu-item">
-              <Image src={potatoesImg} rounded style={{ height: "100px" }} />
+              <Image src={potatoesImg} rounded style={{ height: "100px" }} className="res-img"/>
               <p className="heading">potatoes</p>
             </Col>
             <Col xs={12} md={1} className="menu-item">
-              <Image src={seafoodImg} rounded style={{ height: "100px" }} />
+              <Image src={seafoodImg} rounded style={{ height: "100px" }} className="res-img"/>
               <p className="heading">seafood</p>
             </Col>
           </Row>
@@ -76,7 +76,7 @@ const MenuItem = () => {
 
       {/* Last */}
       <section className="menu-list2">
-        <Container>
+        <Container className="res-box">
           <Row>
             <Col md={6}>
               <MenuItemCard
