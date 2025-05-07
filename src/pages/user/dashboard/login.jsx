@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Modal, Button, Form } from "react-bootstrap";
 
-const Login = ({handleShow}) => {
+const Login = ({ handleShow }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);

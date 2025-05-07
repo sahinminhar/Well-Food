@@ -1,8 +1,5 @@
 import React from "react";
-
-// import tomato from "../../assets/img/half.jpg";
-// import chicken from "../../assets/img/image.webp";
-import food from "../../assets/img/food.jpg";
+import food from "../../../assets/img/food.jpg";
 import { Link } from "react-router-dom";
 
 const dashboard = ({ handleShow }) => {
