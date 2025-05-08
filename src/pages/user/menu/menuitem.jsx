@@ -55,19 +55,39 @@ const MenuItem = () => {
         <Container className="menu-list">
           <Row className="menu-items">
             <Col xs={12} md={1} className="menu-item">
-              <Image src={dessertImg} rounded style={{ height: "100px" }} className="res-img"/>
+              <Image
+                src={dessertImg}
+                rounded
+                style={{ height: "100px" }}
+                className="res-img"
+              />
               <p className="heading">dessert</p>
             </Col>
             <Col xs={12} md={1} className="menu-item">
-              <Image src={vegetarianImg} rounded style={{ height: "100px" }} className="res-img" />
+              <Image
+                src={vegetarianImg}
+                rounded
+                style={{ height: "100px" }}
+                className="res-img"
+              />
               <p className="heading">vegetarian</p>
             </Col>
             <Col xs={12} md={1} className="menu-item">
-              <Image src={potatoesImg} rounded style={{ height: "100px" }} className="res-img"/>
+              <Image
+                src={potatoesImg}
+                rounded
+                style={{ height: "100px" }}
+                className="res-img"
+              />
               <p className="heading">potatoes</p>
             </Col>
             <Col xs={12} md={1} className="menu-item">
-              <Image src={seafoodImg} rounded style={{ height: "100px" }} className="res-img"/>
+              <Image
+                src={seafoodImg}
+                rounded
+                style={{ height: "100px" }}
+                className="res-img"
+              />
               <p className="heading">seafood</p>
             </Col>
           </Row>
@@ -77,7 +97,7 @@ const MenuItem = () => {
       {/* Last */}
       <section className="menu-list2">
         <Container className="res-box">
-          <Row>
+          <Row className="res-boxs">
             <Col md={6}>
               <MenuItemCard
                 name="beef burger"
@@ -97,7 +117,7 @@ const MenuItem = () => {
               />
             </Col>
           </Row>
-          <Row>
+          <Row className="res-boxs">
             <Col md={6}>
               <MenuItemCard
                 name="Chicken roll"
@@ -117,7 +137,7 @@ const MenuItem = () => {
               />
             </Col>
           </Row>
-          <Row>
+          <Row className="res-boxs">
             <Col md={6}>
               <MenuItemCard
                 name="Sea octopus"
@@ -137,22 +157,13 @@ const MenuItem = () => {
               />
             </Col>
           </Row>
-          <Row>
+          <Row className="res-boxs">
             <Col md={6}>
               <MenuItemCard
                 name="raw mince beef"
                 description="Fresh ground beef for cooking"
                 image={rawmincebeefImg}
                 price={180}
-                onQuantityChange={handleQuantityChange}
-              />
-            </Col>
-            <Col md={6}>
-              <MenuItemCard
-                name="hot dog mustard"
-                description="	Hot dog topped with tangy mustard"
-                image={hotdogImg}
-                price={80}
                 onQuantityChange={handleQuantityChange}
               />
             </Col>

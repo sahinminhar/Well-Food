@@ -1,10 +1,15 @@
 import React from "react";
 import food from "../../../assets/img/food.jpg";
 import { Link } from "react-router-dom";
+import NavScroll from "../../../organism/layouts/navbar";
 
 const dashboard = ({ handleShow }) => {
   return (
     <header className="bg-black min-h-screen relative">
+
+        {/* Navbar */}
+        <NavScroll />
+
       <div className="flex">
         <div className="flex">
           <svg

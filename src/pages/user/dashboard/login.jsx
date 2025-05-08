@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-
 import { Modal, Button, Form } from "react-bootstrap";
 
-const Login = ({ handleShow }) => {
+const Login = ({ onShow }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -13,11 +12,12 @@ const Login = ({ handleShow }) => {
     alert("Registration submitted!");
     handleClose();
   };
+
   return (
     <div>
       <button
         onClick={handleShow}
-        className="bg-orange-500 text-white  w-[100px] h-[30px] pb-5 rounded"
+        className="bg-orange-500 text-white w-[100px] h-[30px] pb-5 rounded"
       >
         sign in
       </button>
@@ -62,7 +62,7 @@ const Login = ({ handleShow }) => {
             <Button
               variant="primary"
               type="submit"
-              className="w-[150px] x- bg-orange-500 text-white py-3 rounded-lg font-bold hover:bg-orange-600 transition-colors"
+              className="w-[150px] bg-orange-500 text-white py-3 rounded-lg font-bold hover:bg-orange-600 transition-colors"
             >
               Login
             </Button>
