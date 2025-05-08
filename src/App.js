@@ -25,8 +25,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 
 import Dashboard from "./pages/user/dashboard/dashboard";
-import Menu from "./pages/menu/menuitem";
-import CheckoutPage from "./pages/checkout/checkout";
+import Menu from "./pages/user/menu/menuitem";
+import CheckoutPage from "./pages/user/checkout/checkout";
 import Login from "./pages/user/dashboard/login";
 
 import "./App.css";
