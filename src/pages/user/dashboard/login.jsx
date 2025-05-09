@@ -99,29 +99,116 @@
 // }
 
 // export default BasicExample;
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
+// import FloatingLabel from "react-bootstrap/FloatingLabel";
+// import Form from "react-bootstrap/Form";
 
-function FormFloatingBasicExample() {
+// function FormFloatingBasicExample() {
+//   return (
+//     <>
+//       <div className="ml-[200px]"
+//       >
+//         <div className="email-box">
+//           <FloatingLabel
+//             controlId="floatingInput"
+//             label="Email address"
+//             className="mb-3"
+//           >
+//             <Form.Control type="email" placeholder="name@example.com" />
+//           </FloatingLabel>
+
+//           <FloatingLabel controlId="floatingPassword" label="Password">
+//             <Form.Control type="password" placeholder="Password" />
+//           </FloatingLabel>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default FormFloatingBasicExample;
+import React from "react";
+import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+
+const LoginPage = () => {
   return (
-    <>
-      <div className="ml-[200px]">
-        <div className="email-box">
-          <FloatingLabel
-            controlId="floatingInput"
-            label="Email address"
-            className="mb-3"
-          >
-            <Form.Control type="email" placeholder="name@example.com" />
-          </FloatingLabel>
+    <Container className="top">
+      <Row>
+        <Col
+          md={12}
+          className="p-4"
+          style={{
+            backgroundColor: "#fff",
+            borderRadius: "10px",
+            boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h2 className="text-center mb-4">Login</h2>
+          <Form>
+            {/* Email Field */}
+            <Form.Group controlId="formBasicEmail" className="mb-3">
+              <Form.Control type="email" placeholder="Enter Email" />
+            </Form.Group>
 
-          <FloatingLabel controlId="floatingPassword" label="Password">
-            <Form.Control type="password" placeholder="Password" />
-          </FloatingLabel>
-        </div>
-      </div>
-    </>
+            {/* Password Field */}
+            <Form.Group controlId="formBasicPassword" className="mb-3">
+              <Form.Control type="password" placeholder="Enter Password" />
+            </Form.Group>
+
+            {/* Forgot Password Link */}
+            <div className="text-end mb-3">
+              <a href="#" style={{ color: "#007bff", textDecoration: "none" }}>
+                Forgot Password?
+              </a>
+            </div>
+
+            {/* Login Button */}
+            {/* <Button
+              variant="warning"
+              type="submit"
+              className="w-50 mb-3"
+              style={{
+                backgroundColor: "#ff9500",
+                border: "none",
+                marginRight: "1000px",
+              }}
+            >
+              Login
+            </Button> */}
+            <button type="submit" className="w-70">
+              login
+            </button>
+
+            {/* Sign in with Google Button */}
+            <Button
+              variant="outline-primary"
+              className="w-50"
+              style={{
+                display: "flex",
+                marginRight: "100px",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="https://www.google.com/favicon.ico" // Google's favicon for the icon
+                style={{ width: "20px" }}
+              />
+              Sign in with Google
+            </Button>
+
+            {/* Don't have an account link */}
+            <div className="text-center">
+              <span>Don't have an account? </span>
+              <a href="#" style={{ color: "#007bff", textDecoration: "none" }}>
+                Sign up
+              </a>
+            </div>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
-export default FormFloatingBasicExample;
+export default LoginPage;

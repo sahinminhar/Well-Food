@@ -2,13 +2,11 @@ import React from "react";
 import food from "../../../assets/img/food2.png";
 import Navbar from "../../../organism/layouts/navbar";
 import "../../../assets/css/style.css";
+import { Spinner } from "react-bootstrap";
 
 const Dashboard = () => {
   return (
     <header className="dashboard-header">
-      {/* Navbar */}
-      <Navbar />
-
       <div className="body">
         <div className="main-content">
           <div className="image">
@@ -31,6 +29,7 @@ const Dashboard = () => {
           <button className="view-menu-button">View All Menu</button>
         </div>
       </div>
+      <Spinner />
     </header>
   );
 };

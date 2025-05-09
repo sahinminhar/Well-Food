@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Delete from "./delete";
 import "../../../assets/css/style.css";
+import { Spinner } from "react-bootstrap";
 
 const Checkout = () => {
   const [cart, setCart] = useState([]);
@@ -38,9 +39,11 @@ const Checkout = () => {
 
         {/* Right: Placeholder for Spinner */}
         <div className="spinner-box">
+          
           <h4>Spin for offer</h4>
           <div className="spinner-placeholder"></div>
         </div>
+        <Spinner />
         <div className="order-footer">
           <h3>Total : ₹{totalAmount}</h3>
           <button className="pay-btn">Pay</button>
